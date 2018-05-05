@@ -107,3 +107,14 @@
 12. IE6/7 父级元素的 overflow:hidden 是包不住子级的 relative
 - solution: 父元素添加相对定位(*position: relative)
 
+13. IE6 父级元素是绝对或相对定位的奇数的宽高，子元素是绝对定位的 right和bottom值会有 1px 偏差
+- solution：父级元素宽高设置为偶数参数
+
+14. IE6 下绝对定位元素和浮动元素并列绝对定位元素消失
+- solution: 禁止并列
+
+15. IE6 下 input 的空隙
+- solution: 给 input 添加 *float:left;
+
+16. IE6 下输入类型表单控件背景问题
+- solution:
