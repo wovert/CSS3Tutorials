@@ -117,4 +117,12 @@
 - solution: 给 input 添加 *float:left;
 
 16. IE6 下输入类型表单控件背景问题
-- solution:
+- solution: background:url() no-repeat fixed;
+
+## CSS hack
+- IE9及之前：\9  color:blue \9;
+- IE7及IE7以下: *前缀  *color:red;
+- IE6及IE6以下: _前缀 	_color:green;
+
+## IE6 不支持 png24bit
+
