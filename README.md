@@ -77,3 +77,16 @@
 ```
 
 - [转换字体格式生成兼容代码](http://fontsquirrel.com/fontface/generator)
+
+## 弹性盒模型
+
+- 弹性盒模型父元素必须要加 display:box 或 display:inline-box
+- box-orient 定义盒模型的布局方向
+  - horizontal 水平显示
+  - vertical 垂直方向
+- box-direction 元素排列顺序
+  - normal 正序
+  - reverse 反序
+- box-ordinal-group 设置元素的具体位置
+
+
