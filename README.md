@@ -104,3 +104,41 @@
   - minimun-scale: 最小缩放
   - maxmun-scale: 最大缩放
 
+## 老师浏览器支持 HTML5
+
+``` HTML
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  width: 50px;
+  height: 50px;
+  background: rgb(167, 255 ,109);
+  -moz-border-radius: 15px; /* Firefox */
+  -webkit-border-radius: 15px; /* Safari and Chrome*/
+  border-radius: 15px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3  */
+  -moz-box-shadow: 10px 10p 20px #000; /* Firefox */
+  -webkit-box-shadow: 10px 10px 20px #000; /* Sfari and Chrome */
+  box-shadow: 10px 10px 20px #000; /* Opera 10.5+, future browsers and IE6+ using IE-CSS# */
+  behavior: url(ie-css3.htc); /* IE6模仿大部分CSS3  */
+  /*
+    IE中的 CSS3不完全兼容方案
+    www.cnblogs.com/platero/archive/2010/08/31/1870151.html
+  */
+
+</style>
+```
+
+### 实例
+
+[Flex 布局](./flexbox-playground/index.html)
+
+[瀑布流](./pubu-fenlan/picEnd.html)
+
+[文本分栏](./pubu-fenlan/textEnd.html)
+
+[媒体查询](./MediaQuery/textEnd.html)
+
+[响应式表格](./responsive-table/end.html)
+
+[响应式图片](./responsive-pic/end.html)
