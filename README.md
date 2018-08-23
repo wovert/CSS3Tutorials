@@ -45,12 +45,18 @@
 - E:first-letter
 - E::selection 表示 E 元素在用户选中文字时
 - E::before 生成内容在E 元素之前
+  - .c1:before{content:'*',color:red}
 - E::after
 - E:not(s) 表示 E 元素不被匹配
 - E~F 表示E元素挨着的F元素
 - Content 属性
 
-- rgba()
+- 脱离文档流
+  - float
+  - absolute
+  - fixed
+
+- rgba() 只改变背景颜色的透明度效果（opacity改变元素和其子元素的透明效果）
 - 文字阴影：text-shadow: 2px 2px 4px black;
 - 阴影叠加：text-shadow: 2px 2px 0px red, 2px 2px 4px green;
 - 层叠：color:red;font-size:100px;font-weight:bold;text-shadow:2px 2px 0px white,4px 4px 0px red;
@@ -142,3 +148,25 @@
 [响应式表格](./responsive-table/end.html)
 
 [响应式图片](./responsive-pic/end.html)
+
+## float
+
+> 任何元素浮动之后都会变成块元素
+
+## clear 清除浮动(清除的是浮动带来的负面效果 -> 父标签塌陷(撑不起来))
+
+最常和伪元素结合起来应用
+
+``` shell
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both
+}
+```
+
+## font-family
+
+``` CSS
+font-family: "Microsoft Yahei", "微软雅黑", "Arial", sans-serif;
+```
