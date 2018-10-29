@@ -170,3 +170,154 @@
 ``` CSS
 font-family: "Microsoft Yahei", "微软雅黑", "Arial", sans-serif;
 ```
+
+## background
+
+### background-clip
+
+> 背景图像区域：background-clip
+
+- border-box 背景被裁剪到边框盒
+- padding-box 背景被裁剪到内边距框
+- content-box 背景被裁剪到内容框
+- 兼容性：IE9+,FireFox,Chrome,Safari,Opera
+
+### background-origin
+
+> 背景图像定位， backgrouind-origin 属性指定 background-position 属性应该是相对位置
+  
+- 设置元素背景图片(background-position)的原始起始位置(默认是0，0)
+- padding-box
+- border-box
+- content-box
+- 兼容性：IE9+, FireFox4+, Chrome, Safari5+, Opera
+
+### background-size
+
+> 背景图像大小
+
+- length | percent | cover | contain
+  - 100% auto; 高自适应
+  - 100% 100%; 拉伸效果
+  - 50% auto; 宽度50% 高自适应
+  - 600px auto;
+  - cover: 不留白，等比例最大化显示
+    - 高度正好，宽度会溢出
+  - contain: 宽100%(高留白) 或 高100%(宽留白)
+- 兼容性：IE9+, FireFox4+, Chrome, Safari5+, Opera
+
+### background-image: url(), url(), ...
+
+> 多重背景图像，允许为元素使用多个背景图像
+
+- background-image: url(1.png), url(2.jpg)
+  - 1.png 上一层图片一次覆盖后面的图
+  - 2.jpg 下一层显示
+
+### 背景属性整合
+
+- `background: color position size repeat origin clip attachment image;`
+- background: #abcdef center no-repeat content-box content-box fixed url(1.jpg)
+
+## grandients
+
+> 在两个或多个指定的颜色之间显示平稳的过度
+
+- 兼容性：
+  - IE10+
+  - Chrome 26+, 10.0 -webkit-
+  - Firefox 16+, 3.6 -moz-
+  - Safari 6.1+, 5.1 -webkit-
+  - Opera 12.1+, 11.6 -o-
+
+### linear Gradients 线性渐变属性
+
+> 是沿着一根轴线改变颜色，从起点到终点颜色进行顺序渐变（从一边拉向另一边）
+
+- `background: linear-grandient(direction方向, color-stop1, color-stop2, ..)`
+
+``` CSS
+background: -webkit-linear-grandient(red, blue);
+background: -moz-linear-gradient(red, blue);
+background: -o-linear-gradient(red, blue);
+background: linear-gradient(red,blue);
+
+从上到下, 红色到蓝色(默认)
+background: linear-grandient(color-stop1, color-stop2, ...)
+
+
+从左到右
+background: -webkit-linear-grandient(begin-direction, red, blue);
+background: -moz-linear-gradient(end-direction, red, blue);
+background: -o-linear-gradient(end-directon, red, blue);
+background: linear-gradient(to end-direction, red,blue);
+
+background: -webkit-linear-grandient(left, red, blue);
+background: -moz-linear-gradient(right, red, blue);
+background: -o-linear-gradient(right, red, blue);
+background: linear-gradient(to right, red,blue);
+
+对角(从左上角对右下角)
+background: -webkit-linear-grandient(begin-level begin-vertical, red, blue);
+background: -moz-linear-gradient(end-level end-vertical, red, blue);
+background: -o-linear-gradient(end-level end-vertical, red, blue);
+background: linear-gradient(to end-level end-vertical, red,blue);
+
+
+background: -webkit-linear-grandient(let top, red, blue);
+background: -moz-linear-gradient(right bottom, red, blue);
+background: -o-linear-gradient(right bottom, red, blue);
+background: linear-gradient(to right bottom, red,blue);
+
+
+使用角度
+background: linear-gradient(angle color-stop1, color-stop2, ...)
+
+
+角度是指水平线和渐变线之间的角度，逆时针方向计算。
+上到右(0deg - 90deg)
+0deg 将创建一个从下到上的渐变
+90deg 将创建一个从左到右的渐变
+
+
+background: -webkit-linear-grandient(90deg, red 10%, orange 15%, yellow 20%, green 50%, blue 70%, indigo 80%, violet 100%);
+background: -moz-linear-gradient(90deg, red 10%, orange 15%, yellow 20%, green 50%, blue 70%, indigo 80%, violet 100%);
+background: -o-linear-gradient(90deg, red 10%, orange 15%, yellow 20%, green 50%, blue 70%, indigo 80%, violet 100%);
+background: linear-gradient(90deg, red 10%, orange 15%, yellow 20%, green 50%, blue 70%, indigo 80%, violet 100%);
+
+透明渐变
+background: -webkit-linear-grandient(90deg, rgba(255,0,0,0), rgba(255,0,0,1));
+background: -moz-linear-gradient(90deg, rgba(255,0,0,0), rgba(255,0,0,1));
+background: -o-linear-gradient(90deg, rgba(255,0,0,0), rgba(255,0,0,1));
+background: linear-gradient(90deg, rgba(255,0,0,0), rgba(255,0,0,1));
+
+
+```
+
+线性渐变-重复渐变
+
+``` CSS
+background: repeating-linear-gradient: color1 length | percentage, color2 length | percentage, ...);
+
+
+渐变会重复5边
+background: -webkit-repeating-linear-grandient(90deg, red 0%, blue 20%);
+background: -moz-repeating-linear-gradient(90deg, red 0%, blue 20%);
+background: -o-repeating-linear-gradient(90deg, red 0%, blue 20%);
+background: linear-repeating-gradient(90deg, red 0%, blue 20%);
+```
+
+### 径向渐变
+
+> 从起点到终点颜色从内到外进行圆形渐变（从中间向外拉）
+
+`background: radial-grandient(center, shape size, start-color1, ..., last-color)`
+
+``` CSS
+background: -webkit-radial-gradient(red, blue);
+background: -moz-radial-gradient(red, blue);
+background: -o-radial-gradient(red, blue);
+background: radial-gradient(red, blue);
+
+
+```
