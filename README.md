@@ -319,5 +319,74 @@ background: -moz-radial-gradient(red, blue);
 background: -o-radial-gradient(red, blue);
 background: radial-gradient(red, blue);
 
+颜色结点均匀分布（默认）
+background: radial-gradient(color-stop1, color-stop2, ...);
 
+颜色节点不均匀分布
+background: radial-gradient(color1 length | percentage, color2 length | percentage, ...);
+
+半径的50%，半径的70%
+background: -webkit-radial-gradient(red 50%, blue 70%);
+background: -moz-radial-gradient(red 50%, blue 70%);
+background: -o-radial-gradient(red 50%, blue 70%);
+background: radial-gradient(red 50%, blue 70%);
+
+径向渐变-设置形状
+background: radial-gradient(shape, color-stop1, color-stop2, ...);
+circle - 圆形
+ellipse - 椭圆(默认)
+
+background: -webkit-radial-gradient(circle, red, blue);
+background: -moz-radial-gradient(circle, red, blue);
+background: -o-radial-gradient(circle, red, blue);
+background: radial-gradient(circle, red, blue);
+
+尺寸大小关键字
+backgroun: radial-gradient(size, color-stop1, color-stop2, ...);
+closest-side： 最近边
+closest-corner: 最近角
+farthest-side: 最远边
+farthest-corner: 最远角
+
+30% 70% 是圆心位置
+background: -webkit-radial-gradient(30% 70%, closest-side circle, red, blue);
+background: -moz-radial-gradient(30% 70%, closest-side circle, red, blue);
+background: -o-radial-gradient(30% 70%, closest-side circle, red, blue);
+background: radial-gradient(30% 70%, closest-side circle, red, blue);
+
+background: -webkit-radial-gradient(30% 70%, closest-corner circle, red, blue);
+background: -moz-radial-gradient(30% 70%, closest-corner circle, red, blue);
+background: -o-radial-gradient(30% 70%, closest-corner circle, red, blue);
+background: radial-gradient(30% 70%, closest-corner circle, red, blue);
+
+background: -webkit-radial-gradient(30% 70%, farthest-side circle, red, blue);
+background: -moz-radial-gradient(30% 70%, farthest-side circle, red, blue);
+background: -o-radial-gradient(30% 70%, farthest-side circle, red, blue);
+background: radial-gradient(30% 70%, farthest-side circle, red, blue);
+
+background: -webkit-radial-gradient(30% 70%, farthest-corner circle, red, blue);
+background: -moz-radial-gradient(30% 70%, farthest-corner circle, red, blue);
+background: -o-radial-gradient(30% 70%, farthest-corner circle, red, blue);
+background: radial-gradient(30% 70%, farthest-corner circle, red, blue);
+
+重复渐变
+background: repeating-radial-gradicent(color1 length | percentage, color2 length | percentage, ...);
+
+background: -webkit-repeating-radial-grandient(red 0%, blue 10%, red 20%);
+background: -moz-repeating-radial-gradient(red 0%, blue 10%, red 20%);
+background: -o-repeating-radial-gradient(red 0%, blue 10%, red 20%);
+background: radial-repeating-gradient(red 0%, blue 10%, red 20%);
 ```
+
+IE6-8 渐变
+
+``` CSS
+filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#startColor', endColorstr='#endColor', GradientType=0);
+
+GradientType = 0 上红下黑
+GradientType = 1 左红右黑
+GradientType = 2 上蓝下黑
+
+filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', endColorstr='#0000ff', GradientType=0);
+```
+
