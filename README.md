@@ -404,4 +404,28 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 
 ## 盒阴影
 
-## 边界图片
+> 设置一个或多个下拉阴影的框
+
+- `box-shadow: h-shadow v-shadow blur spread扩展 color inset;`
+- blur 不可以有负值
+- spread 向四个方向扩张
+- insert 内阴影，可以网内扩张，即负值
+- 兼容性：IE9+， FireFox4+, Chrome, Safari5+, Opera
+
+## 边界图片 - border-image 属性
+
+> border-image-* 属性来构建可扩展按钮
+
+- `border-image: source slice width outset repeat;`
+- 兼容性：IE和Opera不兼容, Chrome, FireFox, Safari6+
+
+- border-image-source: none | image;
+- border-image-slice: number|%|fill; 指定图像的边界向内偏移
+- border-image-width 属性指定图像边界的宽度
+
+- border-image-width: number | % | auto;
+- border-image-outset: length | number; 往元素外边扩张
+- border-image-repeat: repeated | stretched(默认，拉伸) | rounded(铺满) | initial | inherit;
+
+
+![border-image结构](./structure.png)
