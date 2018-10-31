@@ -390,3 +390,18 @@ GradientType = 2 上蓝下黑
 filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', endColorstr='#0000ff', GradientType=0);
 ```
 
+## 圆角
+
+> border-radius属性最多可指定四个border-*-radius 属性的复合属性
+
+- border-radius: 1-4 length | % / 1-4 length | %;
+- 兼容性：IE9+, Firefox4+, Chrome, Safari5+, Opera
+- 多值：左上角,右上角,右下角,左下角
+- border-top-left-raidus: 左上角
+- border-top-right-radius: 右上角
+- border-bottom-right-radius: 有下角
+- border-bottom-left-radius: 左下角
+
+## 盒阴影
+
+## 边界图片
