@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>border-radius</title>
+  <style>
+    div {
+      width: 800px;
+      height: 300px;
+      border: 5px solid red;
+      margin: 0 auto;
+      border-radius: 50px;
+      border-radius: 5em;
+      border-radius: 5rem;
+      border-radius: 5vw;
+      border-radius: 50%;
+    }
+    h1 {
+      position: relative;
+      width: 500px;
+      height: 300px;
+      border: 1px solid black;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 300px;
+    }
+    h1:before,
+    h1:after {
+      position: absolute;
+      content: "";
+      display: block;
+      border: 1px solid black;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+    }
+    h1:before {
+      width: 50px;
+      height: 50px;
+      bottom: -25px;
+      right: 25px;
+    }
+    h1:after {
+      width: 20px;
+      height: 20px;
+      bottom: -75px;
+      right: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <h1>Welcome to wovert.com</h1>
+</body>
+</html>
