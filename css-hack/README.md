@@ -128,7 +128,7 @@ IE6 下： `.clearfix { *zoom:1;}` zoom 缩放 : 触发 IE下 haslayout，使元
 12. IE6/7 父级元素的 overflow:hidden 是包不住子级的 relative
 - solution: 父元素添加相对定位(*position: relative)
 
-13. IE6 父级元素是绝对或相对定位的奇数的宽高，子元素是绝对定位的 right和bottom值会有 1px 偏差
+13. IE6 父级元素·是绝对或相对定位的奇数的宽高，子元素是绝对定位的 right和bottom值会有 1px 偏差
 - solution：父级元素宽高设置为偶数参数
 
 14. IE6 下绝对定位元素和浮动元素并列绝对定位元素消失
