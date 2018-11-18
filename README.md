@@ -500,3 +500,70 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 
 - transition 复合水泥股，检索或设置对象变换时的过度
 - `transition: property duration timing-function delay`
+
+## transform 转换
+
+> 让元素在一个坐标系统中变形。这个属性包含一系列变形函数，可以移动、旋转和缩放元素。
+
+`transform: none | <transform-function> [ <transform-function> ]*`
+
+- 默认值：`transform: none`
+
+- 兼容性：IE12+, FF16+, Chrome36+, Safari16+, Opera23+
+
+### CSS3 Transform
+
+- CSS3 rotate()
+  - 通过指定的角度参数对原元素指定一个2D rotation(2D 旋转)
+  - transform: rotate(<angle>)
+  - angle 指旋转角度，正数表示顺时针旋转，负数表示逆时针旋转
+- CSS3 translate()
+  - 根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动
+  - transform: translateX(x) 仅水平方向移动(X轴一定)
+  - transform: translateY(y) 仅垂直方向移动(Y轴一定)
+  - transform: translate(x,y) 水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动）
+  - 左上角是原点
+- CSS3 scale()
+  - transform: scaleX(x) 元素仅水平方向缩放（X轴缩放）
+  - transform: scaleY(y) 元素仅垂直方向缩放（Y轴缩放）
+  - transofmr: scale(x,y) 使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放）
+- CSS3 skew()
+  - transform: skewX(<angle>) 按指定的角度沿X轴指定一个 skew transformation(斜切变换) 正值：逆时针
+  - transform: skewY(<angle>) 正值：顺时针，负值：逆时针
+  - 轴心是中心点
+  - transform: skew(<anble>[, <anble>])
+- CSS3 matrix()
+  - 以一个含六值的(a,b,c,d,e,f) 变换矩阵的形式指定一个2D变换
+  - 相当于直接应用一个[a,b,c,d,e,f] 变换矩阵
+  - transform: matrix(a,c,b,d,tx,ty) tx,ty就是基于X和Y坐标重新定位元素
+
+### CSS3 2D转换
+
+- translate(<translation-value>[, <translation-value>])
+  - 通过矢量[tx,txy] 指定一个2D translation, tx是第一个过渡值参数，ty是第二个过渡值参数选项
+  - `transform: translate(<translate-value> [, <translation-value>])`
+
+### CSS3 3D转换
+
+![3D 转换](./images/3d.png)
+
+- transform: rotate3d()
+  - transform: rotateX()
+  - transform: rotateY()
+  - transform: rotateZ()
+  - transform: rotate3d(x,y,z,angle) 前3个参数分别表示旋转的方向x,y,z; 第四个参数表示旋转的角度，参数不允许省略
+- transform: translate3d(x,y,z)
+- transform: scale3d()
+- transofmr: matrix3d()
+  - transform: matrix3d(sx,n,n,n,n,sy,n,n,n,n,sz,n,n,n,n,1) 
+  - 使用16个值的 4x4 矩阵 （旋转，移动，缩放）
+
+### CSS3 Transform与坐标系统
+
+- transform-origin 属性允许您更改转换元素的位置
+- transform-origin: x-axis y-axis z-axis
+
+### CSS3 矩阵
+
+### CSS3 扩展属性
+
