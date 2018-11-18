@@ -429,3 +429,74 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 
 
 ![border-image结构](./structure.png)
+
+## 过度-transition
+
+> 允许CSS属性在一定时间区间内平滑的过度；在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑的以动画效果改变CSS的属性值
+
+- 一个元素从一种表现形态转换为另一种变现形态。
+- CSS 值发生变化。
+- 效率高，瞬间变化，速度快
+- 前1S的视觉在人眼中停留0.1s；CSS变化时间 < 0.1s, 20帧/s
+
+- 兼容性：IE10+, FF16+, Chrome26+, Safari6.1+, Opera12.1+
+
+1. 打开扩展程序输入  `autoprefixer`  查找插件安装
+2. 安装好后打开cmd窗口运行：`npm i -g autoprefixer`，但在此之前要先保证电脑中安装了node
+3. 在菜单里设置：文件---首选项--键盘快捷方式----搜索框下面有一句灰色的话：高级自定义请打开编辑keybingings.json，点击keybindings.json，在右边的[ ]里添加：:
+
+``` conf
+{
+  "key": "ctrl+shift+c",
+  "command": "autoprefixer.execute"
+}
+```
+
+4. 然后在css写了样式保存后，按 ctrl+shift+c 就可以格式化了。当然，是一键格式当前文件所有，不用每次都格式化。如果报错说 command 'autoprefixer.execute' not found，就把插件autoprefixer重新安装一下
+
+注意：搜狗五笔输入法中ctrl+shift+c这个快捷键冲突了，要更改一下搜狗里快捷键的设置
+
+### transition 过度属性
+
+- transition-property
+  - 检索或设置对象中的参与过度的属性
+  - `transition-property: none | all | property;`
+    - none 没有属性改变
+    - all 所有属性改变，默认值
+    - property 元素的属性名称 （color, opacity...)
+
+- transition-duration 属性
+  - 检索或设置对象过度的持续时间
+  - transition-duration: time;
+  - 规定完成过度效果需要花费的时间（以秒或毫秒计）
+  - 默认值是 0
+  - 慢-快-慢
+  - 快-慢
+  - 慢-快
+  - 匀速
+
+- transition-timing-function 属性
+  - 检索或设置对象中过度的动画类型
+  - ease：平滑过渡。等同于贝塞尔曲线（0.25, 0.1, 0.25, 1.0）
+  - linear: 现行过度。等同于贝塞尔曲线（0.0, 0.0, 1.0, 1.0）
+    - 开始多快，结束多快
+  - ease-in: 由慢到块。等同于贝塞尔曲线（0.42, 0, 1.0, 1.0）
+    - ease和ease-in 结束比较生硬
+  - ease-out：由快到慢。等同于贝塞尔曲线（0, 0, 0.58, 1.0）
+  - ease-in-out：由慢到快再到慢。等同于贝塞尔曲线（0.42, 0, 0.58, 1.0）
+  - step-start：等同于 steps(1, start)
+  - step-end：等同于 steps(1, end)
+  - steps(<integer>[, [start | end]]？): 接受两个参数的步进函数
+    - 第一个参数：必须为正整数，指定函数
+    - 第二个参数：取值可是 start 或 end，指定每一步的值发生变化的时间点
+  - cubic-bezier(<number>,<number>,<number>,<number>)
+
+- transition-delay 属性
+  - 检索或设置对象延迟过度的时间
+  - 是即可执行还是延迟执行
+  - `transition-delay: time;`
+    - 指定秒或毫秒数之前要等待切换效果开始
+    - 默认值为 0
+
+- transition 复合水泥股，检索或设置对象变换时的过度
+- `transition: property duration timing-function delay`
