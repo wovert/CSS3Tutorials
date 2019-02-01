@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: red;
+      transition: 1000ms width ease 0s, 2000ms height ease 0s;
+    }
+    /* .box:hover {
+      width: 600px;
+    } */
+  </style>  
+</head>
+<body>
+  <div class="box" id="box"></div>
+  <script>
+    var oBox = document.getElementById('box')
+    oBox.onclick = function () {
+      console.log(this)
+      this.style.width = this.offsetWidth + 100 + 'px'
+      this.style.height = this.offsetHeight + 100 + 'px'
+    }
+
+    // oBox 设置多少个过度执行多少个transitionend事件
+    // 所有过度动画之前完成之后，分别执行相应的transitionend事件
+    addEnd(oBox, function () {
+      alert('end')
+    })
+    // 过度完成事件
+    // webkit kernel: WebkitTransitionEnd
+    // firefox: transitionend
+    function addEnd (obj, fn) {
+      obj.addEventListener('WebkitTransitionEnd', fn, false);
+      obj.addEventListener('transitionend', fn, false)
+    }
+  </script>
+</body>
+</html>

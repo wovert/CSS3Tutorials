@@ -494,4 +494,30 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 
 ![border-image结构](./structure.png)
 
+## 过度 - transition
 
+- `transition: 过度时间 过度样式 过度形式 延迟时间;`
+- `transition: 1s width, 2s height, 3s background`
+
+- 过渡时间：
+  - s: 秒
+  - ms: 毫秒
+
+- 过度样式：
+  - all: 所有样式
+  - width: 宽度过度样式
+
+- 过度形式：
+  - ease: 逐渐变慢 默认值
+  - linear: 匀速
+  - ease-in： 加速
+  - ease-out: 减速
+  - ease-in-out: 先加速后慢速
+  - [cubic-bezier](http://matthewlein.com/ceaser/): 贝塞尔曲线(x1,y1,x2,y2)
+
+- 延迟时间：等待多长时间开始过度动画
+
+### transitionend 事件
+
+- [transitionend事件](./transition/index_js.html)
+- 问题：[重复执行过度](./transition/index_js_repeat.html)
