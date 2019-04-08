@@ -1,5 +1,9 @@
 # CSS3
 
+## 资源站点
+
+- [CSS88](http://css88.com/book/css)
+
 ## CSS2选择器
 
 - 通配符选择器
@@ -633,7 +637,7 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 
 ### CSS3 2D转换
 
-- translate(<translation-value>[, <translation-value>])
+- `translate(<translation-value>[, <translation-value>])`
   - 通过矢量[tx,txy] 指定一个2D translation, tx是第一个过渡值参数，ty是第二个过渡值参数选项
   - `transform: translate(<translate-value> [, <translation-value>])`
 
