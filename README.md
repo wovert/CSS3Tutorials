@@ -249,7 +249,7 @@ font-family: "Microsoft Yahei", "微软雅黑", "Arial", sans-serif;
 - border-box 背景被裁剪到边框盒
 - padding-box 背景被裁剪到内边距框
 - content-box 背景被裁剪到内容框
-- 兼容性：IE9+,FireFox,Chrome,Safari,Opera
+- 兼容性：IE9+, FireFox, Chrome, Safari, Opera
 
 ### background-origin
 
