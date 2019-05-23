@@ -18,6 +18,10 @@
       background: red;
       /* overflow: hidden; */
     }
+    .container {
+      overflow: auto;
+      border: 1px solid black;
+    }
     .a,.b,.c {
       float: left;
     }
@@ -25,16 +29,24 @@
       width: 200px;
       height: 200px;
       background: green;
+      width: 20%;
     }
     .b {
       width: 700px;
-      height: 200px;
+      height: 400px;
       background: red;
+      width: 60%;
     }
     .c {
       width: 300px;
       height: 200px;
       background: blue;
+      width: 20%;
+    }
+    .hh {
+      height: 360px;
+      background: gold;
+      clear: both;
     }
   </style>
 </head>
@@ -43,8 +55,11 @@
   <div class="green"></div>
   <div class="red">文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕</div>
   <h1>横向排版布局</h1>
-  <div class="a"></div>
-  <div class="b"></div>
-  <div class="c"></div>
+  <div class="container">
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+    <div class="hh"></div>
+  </div>
 </body>
 </html>
