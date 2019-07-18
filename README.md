@@ -4,16 +4,16 @@
 
 - [CSS88](http://css88.com/book/css)
 
-## CSS2选择器
+## CSS2 选择器
 
 - 通配符选择器
 - 元素选择器
 - 类选择器
-- ID选择器
+- ID 选择器
 - 后代选择器
 - 群组选择器(IE6+)
-  
-## CSS3新增选择器
+
+## CSS3 新增选择器
 
 - 子元素选择器
   - 语法：parent > children
@@ -32,7 +32,7 @@
 - `E[attr^="value"` value **开头属性值**
 - `E[attr$="value"]` value **结尾属性值**
 - `E[attr*="value"]` 属性中包含了 value **包含**
-- `E[attr|="value"]` 属性中包含了 value或者 **value-开头的值**（比如：zh-cn）
+- `E[attr|="value"]` 属性中包含了 value 或者 **value-开头的值**（比如：zh-cn）
 - `E[attr~="value"]` 属性值是一个词列表，并且以**空格隔开**，其中次列表中包含了一个 value 词，而且等号前面的“~”不能大写
 
 ## 动态伪类
@@ -54,25 +54,25 @@
 
 - :enabled
 - :disabled
-- :checked(仅Opera支持)
+- :checked(仅 Opera 支持)
 - 兼容性：IE9+, FireFox, Chrome, Safari, Opera
 
 ## [CSS3 结构伪类选择器](./selector/structure_selector.html)
 
-- E:nth-child(n)：E父元素中的第 n 个字节点 (IE9+, Firefox4+)
+- E:nth-child(n)：E 父元素中的第 n 个字节点 (IE9+, Firefox4+)
   - p:nth-child(odd) {} 匹配奇数行
   - p:nth-child(even) {} 匹配偶数行
   - p:nth-child(2n) {} 偶数行
   - p:nth-child(2n-1) {} 奇数行
-- E:nth-last-child(n) 表示 E 父元素中的第 n  个字节点，从后向前计算
+- E:nth-last-child(n) 表示 E 父元素中的第 n 个字节点，从后向前计算
 - E:nth-of-type(n) 表示 E 父元素中的第 n 个字节点，且类型为 E
   - IE9+, Firefox4+
 - E:nth-last-of-type(n) 表示 E 父元素中的第 n 个字节点，且类型为 E，从后向前计算
-- E:empty() 表示E元素中没有子节点，注意：子节点包括文本节点
-- E:first-child == E:nth-child(1)  E元素的父元素的**首个子元素**的**每个 element元素**
+- E:empty() 表示 E 元素中没有子节点，注意：子节点包括文本节点
+- E:first-child == E:nth-child(1) E 元素的父元素的**首个子元素**的**每个 element 元素**
   - IE9+
 - :last-child == :nth-last-child(1)
-- E:first-of-type == E:nth-of-type(1) E元素的父元素的**E类型首个子元素**的**每个 element元素**
+- E:first-of-type == E:nth-of-type(1) E 元素的父元素的**E 类型首个子元素**的**每个 element 元素**
 - :last-of-type == nth-last-of-type(1)
 
 - E:first-child 表示 E 元素中的第一个子节点
@@ -80,11 +80,12 @@
 - E:first-of-type 表示 E 元素中的第一个子节点且节点类型是 E 的
 - E:last-of-type 表示 E 元素中最后一个子节点且节点类型是 E 的
 - E:only-child 表示 E 元素中只有一个子节点，注意：自己诶但不包含文本节点
-- E:only-of-type 表示 E 父元素中只有一个子节点，且这个唯一的子节点的类型必须是E。注意：子节点不包括文本节点
+- E:only-of-type 表示 E 父元素中只有一个子节点，且这个唯一的子节点的类型必须是 E。注意：子节点不包括文本节点
 
 ## [伪类选择器](./selector/weilei_selector.html)
 
-- E:target 表示当前的URL片段的元素类型，这个元素必须是E
+- E:target 表示当前的 URL 片段的元素类型，这个元素必须是 E
+  - 被锚链接指向的时候会触发该选择器
 - E:disabled 不可点击的表单控件
 - E:enabled 可点击的表单控件
 - E:checked 已选中的 checkbox 或 radio
@@ -92,66 +93,67 @@
 - E::first-line E 块元素中的第一行
 - E::first-letter
 - E::selection 表示 E 元素在用户选中文字时
-- E::before 生成内容在E 元素之前
-  - .c1:before{content:'*',color:red}
+  - 鼠标被选中的时候触发
+- E::before 生成内容在 E 元素之前
+  - .c1:before{content:'\*',color:red}
 - E::after
 
 - E:not(子元素/子选择器) 表示 E 元素不被匹配
-- E~F 表示E元素挨着的F元素
+- E~F 表示 E 元素挨着的 F 元素
 - Content 属性
 
 - 脱离文档流
+
   - float
   - absolute
   - fixed
 
-- rgba() 只改变背景颜色的透明度效果（opacity改变元素和其子元素的透明效果）
+- rgba() 只改变背景颜色的透明度效果（opacity 改变元素和其子元素的透明效果）
 - 文字阴影：text-shadow: 2px 2px 4px black;
 - 阴影叠加：text-shadow: 2px 2px 0px red, 2px 2px 4px green;
 - 层叠：color:red;font-size:100px;font-weight:bold;text-shadow:2px 2px 0px white,4px 4px 0px red;
 - 光晕：color:white;font-size:100px;text-shadow:0 0 10px #fff,0 0 20px #fff,0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
 - 文字描边：-webkit-text-stroke: 宽度 颜色;
 - 文字排列：direction: rtl | ltr; rtl: 从右向左排列; ltr: 从左向右排列
-  - 注意要配合 unicode-bidi  一块使用
+  - 注意要配合 unicode-bidi 一块使用
 - text-overflow: clip | ellipsis;
-  - ellipsis省略号 注意配合`text-overflow:ellipsis;overlfow:hidden;white-space:nowrap;` 一块使用
+  - ellipsis 省略号 注意配合`text-overflow:ellipsis;overlfow:hidden;white-space:nowrap;` 一块使用
 
 ## 自定义文字
 
-``` css
+```css
 @font-face {
-  font-faimily: 'wovert';
-  src:url('../font/wovert-webfont.eot');
-  src:url(../font/wovert-webfont.eot?#iefix) format('embedded-opentype'),
-   url('../font/wovert-webfont.woff') format('woff'),
-   url('../font/wovert-webfont.tty') format('truetype'),
-   url('../font/wovert-webfont.svg#untitledregular') format('svg');
+  font-faimily: "wovert";
+  src: url("../font/wovert-webfont.eot");
+  src: url(../font/wovert-webfont.eot?#iefix) format("embedded-opentype"), url("../font/wovert-webfont.woff")
+      format("woff"), url("../font/wovert-webfont.tty") format("truetype"), url("../font/wovert-webfont.svg#untitledregular")
+      format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif; ;
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB,
+    WenQuanYi Micro Hei, sans-serif;
 }
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: wovert;
 }
-
 ```
 
 - [转换字体格式生成兼容代码](http://fontsquirrel.com/fontface/generator)
 
 ## 新盒子模型
 
-> width和height包括哪些
+> width 和 height 包括哪些
 
 - box-sizing: content-box(默认) | border-box | padding-box
   - border-box: 整个盒子的宽高
 
-## CSS其他属性
+## CSS 其他属性
 
-- perspective: 视距，实现3D动画必用的属性
+- perspective: 视距，实现 3D 动画必用的属性
 - @media: 媒体查询，实现响应式布局
 - @font-face: 导入字体图标
 
@@ -176,20 +178,20 @@ body {
 
 > 文旦兼容模式，表示如果在 IE 浏览器下则使用最新的标准渲染当前文档
 
-``` HTML
+```HTML
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 ```
 
 ### 视口
 
-``` HTML
+```HTML
 <meta name="viewport" content="width=device-width,initial-scale=1">
 ```
 
 - 适口的作用：在移动浏览器中，当页面宽度超出设备，浏览器内部虚拟的一个页面，将页面容器缩放到设备这个大，然后展示
-- 目前大多数收集浏览器的视口（承载页面的容器）宽度都是980
+- 目前大多数收集浏览器的视口（承载页面的容器）宽度都是 980
 - 视口的宽度可以通过 meta 标签设置
-- 此属性为移动端页面适口设置，当前值标识在移动端页面的宽度为设备的宽度，并缩放（缩放级别为1）
+- 此属性为移动端页面适口设置，当前值标识在移动端页面的宽度为设备的宽度，并缩放（缩放级别为 1）
   - width: 视口的宽度
   - initial-scale：初始化缩放
   - user-scalable: 是否允许用户自行缩放（value:{yes|no},{1|0}）
@@ -198,7 +200,7 @@ body {
 
 ## 老师浏览器支持 HTML5
 
-``` HTML
+```HTML
 <!--[if IE]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -257,7 +259,7 @@ body {
 
 最常和伪元素结合起来应用
 
-``` shell
+```shell
 .clearfix:after {
   content: "";
   display: block;
@@ -267,7 +269,7 @@ body {
 
 ## font-family
 
-``` CSS
+```CSS
 font-family: "Microsoft Yahei", "微软雅黑", "Arial", sans-serif;
 ```
 
@@ -278,18 +280,18 @@ font-family: "Microsoft Yahei", "微软雅黑", "Arial", sans-serif;
 > 背景图像区域：background-clip
 
 - border-box 背景被裁剪到边框盒
-- padding-box 背景被裁剪到内边距框
+- padding-box 背景被裁剪到内边距框 default
 - content-box 背景被裁剪到内容框
 - 兼容性：IE9+, FireFox, Chrome, Safari, Opera
 
 ### background-origin
 
 > 背景图像定位， backgrouind-origin 属性指定 background-position 属性应该是相对位置
-  
-- 设置元素背景图片(background-position)的原始起始位置(默认是0，0)
-- padding-box
-- border-box
-- content-box
+
+- 设置元素背景图片(background-position)的原始起始位置(默认是 0，0)
+- padding-box 背景图像相对内边距定位(padding 左上角) default
+- border-box 背景图像相对边框定位(边框左上角)
+- content-box 背景图像相对内容区域定位(内容区域左上角)
 - 兼容性：IE9+, FireFox4+, Chrome, Safari5+, Opera
 
 ### background-size
@@ -299,11 +301,11 @@ font-family: "Microsoft Yahei", "微软雅黑", "Arial", sans-serif;
 - length | percent | cover | contain
   - 100% auto; 高自适应
   - 100% 100%; 拉伸效果
-  - 50% auto; 宽度50% 高自适应
+  - 50% auto; 宽度 50% 高自适应
   - 600px auto;
   - cover: 不留白，等比例最大化显示
     - 高度正好，宽度会溢出
-  - contain: 宽100%(高留白) 或 高100%(宽留白)
+  - contain: 宽 100%(高留白) 或 高 100%(宽留白)
 - 兼容性：IE9+, FireFox4+, Chrome, Safari5+, Opera
 
 ### background-image: url(), url(), ...
@@ -336,7 +338,7 @@ font-family: "Microsoft Yahei", "微软雅黑", "Arial", sans-serif;
 
 - `background: linear-grandient(direction方向, color-stop1, color-stop2, ..)`
 
-``` CSS
+```CSS
 background: -webkit-linear-grandient(red, blue);
 background: -moz-linear-gradient(red, blue);
 background: -o-linear-gradient(red, blue);
@@ -396,7 +398,7 @@ background: linear-gradient(90deg, rgba(255,0,0,0), rgba(255,0,0,1));
 
 线性渐变-重复渐变
 
-``` CSS
+```CSS
 background: repeating-linear-gradient: color1 length | percentage, color2 length | percentage, ...);
 
 
@@ -413,7 +415,7 @@ background: linear-repeating-gradient(90deg, red 0%, blue 20%);
 
 `background: radial-grandient(center, shape size, start-color1, ..., last-color)`
 
-``` CSS
+```CSS
 background: -webkit-radial-gradient(red, blue);
 background: -moz-radial-gradient(red, blue);
 background: -o-radial-gradient(red, blue);
@@ -480,7 +482,7 @@ background: radial-repeating-gradient(red 0%, blue 10%, red 20%);
 
 IE6-8 渐变
 
-``` CSS
+```CSS
 filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#startColor', endColorstr='#endColor', GradientType=0);
 
 GradientType = 0 上红下黑
@@ -492,7 +494,7 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 
 ## 圆角
 
-> border-radius属性最多可指定四个border-*-radius 属性的复合属性
+> border-radius 属性最多可指定四个 border-\*-radius 属性的复合属性
 
 - border-radius: 1-4 length | % / 1-4 length | %;
 - 兼容性：IE9+, Firefox4+, Chrome, Safari5+, Opera
@@ -514,10 +516,10 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 
 ## 边界图片 - border-image 属性
 
-> border-image-* 属性来构建可扩展按钮
+> border-image-\* 属性来构建可扩展按钮
 
 - `border-image: source slice width outset repeat;`
-- 兼容性：IE和Opera不兼容, Chrome, FireFox, Safari6+
+- 兼容性：IE 和 Opera 不兼容, Chrome, FireFox, Safari6+
 
 - border-image-source: none | image;
 - border-image-slice: number|%|fill; 指定图像的边界向内偏移
@@ -529,20 +531,38 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 
 ![border-image结构](./structure.png)
 
+```css
+/* 设置边框图片 */
+border-image-source: url("2.png");
+
+/* 边框图片裁切 : 不需要带单位*/
+border-image-slice: 20;
+
+/* 设置边框图片的平铺方式 */
+/* border-image-repeat: stretch; */
+border-image-repeat: round;
+/*  border-image-repeat: repeat; */
+
+border-image-width: 20px;
+```
+
 ## 过度 - transition
 
 - `transition: 过度时间 过度样式 过度形式 延迟时间;`
 - `transition: 1s width, 2s height, 3s background`
 
 - 过渡时间：
+
   - s: 秒
   - ms: 毫秒
 
 - 过度样式：
+
   - all: 所有样式
   - width: 宽度过度样式
 
 - 过度形式：
+
   - ease: 逐渐变慢 默认值
   - linear: 匀速
   - ease-in： 加速
@@ -554,40 +574,41 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 
 ### transitionend 事件
 
-- [transitionend事件](./transition/index_js.html)
+- [transitionend 事件](./transition/index_js.html)
 - 问题：[重复执行过度](./transition/index_js_repeat.html)
 
 ![border-image结构](./structure.png)
 
 ## 过度-transition
 
-> 允许CSS属性在一定时间区间内平滑的过度；在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑的以动画效果改变CSS的属性值
+> 允许 CSS 属性在一定时间区间内平滑的过度；在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑的以动画效果改变 CSS 的属性值
 
 - 一个元素从一种表现形态转换为另一种变现形态。
 - CSS 值发生变化。
 - 效率高，瞬间变化，速度快
-- 前1S的视觉在人眼中停留0.1s；CSS变化时间 < 0.1s, 20帧/s
+- 前 1S 的视觉在人眼中停留 0.1s；CSS 变化时间 < 0.1s, 20 帧/s
 
 - 兼容性：IE10+, FF16+, Chrome26+, Safari6.1+, Opera12.1+
 
-1. 打开扩展程序输入  `autoprefixer`  查找插件安装
-2. 安装好后打开cmd窗口运行：`npm i -g autoprefixer`，但在此之前要先保证电脑中安装了node
-3. 在菜单里设置：文件---首选项--键盘快捷方式----搜索框下面有一句灰色的话：高级自定义请打开编辑keybingings.json，点击keybindings.json，在右边的[ ]里添加：:
+1. 打开扩展程序输入 `autoprefixer` 查找插件安装
+2. 安装好后打开 cmd 窗口运行：`npm i -g autoprefixer`，但在此之前要先保证电脑中安装了 node
+3. 在菜单里设置：文件---首选项--键盘快捷方式----搜索框下面有一句灰色的话：高级自定义请打开编辑 keybingings.json，点击 keybindings.json，在右边的[ ]里添加：:
 
-``` conf
+```conf
 {
   "key": "ctrl+shift+c",
   "command": "autoprefixer.execute"
 }
 ```
 
-4. 然后在css写了样式保存后，按 ctrl+shift+c 就可以格式化了。当然，是一键格式当前文件所有，不用每次都格式化。如果报错说 command 'autoprefixer.execute' not found，就把插件autoprefixer重新安装一下
+4. 然后在 css 写了样式保存后，按 ctrl+shift+c 就可以格式化了。当然，是一键格式当前文件所有，不用每次都格式化。如果报错说 command 'autoprefixer.execute' not found，就把插件 autoprefixer 重新安装一下
 
-注意：搜狗五笔输入法中ctrl+shift+c这个快捷键冲突了，要更改一下搜狗里快捷键的设置
+注意：搜狗五笔输入法中 ctrl+shift+c 这个快捷键冲突了，要更改一下搜狗里快捷键的设置
 
 ### transition 过度属性
 
 - transition-property
+
   - 检索或设置对象中的参与过度的属性
   - `transition-property: none | all | property;`
     - none 没有属性改变
@@ -595,6 +616,7 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
     - property 元素的属性名称 （color, opacity...)
 
 - transition-duration 属性
+
   - 检索或设置对象过度的持续时间
   - transition-duration: time;
   - 规定完成过度效果需要花费的时间（以秒或毫秒计）
@@ -605,12 +627,13 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
   - 匀速
 
 - transition-timing-function 属性
+
   - 检索或设置对象中过度的动画类型
   - ease：平滑过渡。等同于贝塞尔曲线（0.25, 0.1, 0.25, 1.0）
   - linear: 现行过度。等同于贝塞尔曲线（0.0, 0.0, 1.0, 1.0）
     - 开始多快，结束多快
   - ease-in: 由慢到块。等同于贝塞尔曲线（0.42, 0, 1.0, 1.0）
-    - ease和ease-in 结束比较生硬
+    - ease 和 ease-in 结束比较生硬
   - ease-out：由快到慢。等同于贝塞尔曲线（0, 0, 0.58, 1.0）
   - ease-in-out：由慢到快再到慢。等同于贝塞尔曲线（0.42, 0, 0.58, 1.0）
   - step-start：等同于 steps(1, start)
@@ -621,6 +644,7 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
   - cubic-bezier(<number>,<number>,<number>,<number>)
 
 - transition-delay 属性
+
   - 检索或设置对象延迟过度的时间
   - 是即可执行还是延迟执行
   - `transition-delay: time;`
@@ -643,36 +667,36 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 ### CSS3 Transform
 
 - CSS3 rotate()
-  - 通过指定的角度参数对原元素指定一个2D rotation(2D 旋转)
+  - 通过指定的角度参数对原元素指定一个 2D rotation(2D 旋转)
   - `transform: rotate(<angle>)`
   - angle 指旋转角度，正数表示顺时针旋转，负数表示逆时针旋转
 - CSS3 translate()
-  - 根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动
-  - `transform: translateX(x)` 仅水平方向移动(X轴一定)
-  - `transform: translateY(y)` 仅垂直方向移动(Y轴一定)
-  - `transform: translate(x,y)` 水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动）
+  - 根据左(X 轴)和顶部(Y 轴)位置给定的参数，从当前元素位置移动
+  - `transform: translateX(x)` 仅水平方向移动(X 轴一定)
+  - `transform: translateY(y)` 仅垂直方向移动(Y 轴一定)
+  - `transform: translate(x,y)` 水平方向和垂直方向同时移动（也就是 X 轴和 Y 轴同时移动）
   - 左上角是原点
 - CSS3 scale()
-  - `transform: scaleX(x)` 元素仅水平方向缩放（X轴缩放）
-  - `transform: scaleY(y)` 元素仅垂直方向缩放（Y轴缩放）
-  - `transofmr: scale(x,y)` 使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放）
+  - `transform: scaleX(x)` 元素仅水平方向缩放（X 轴缩放）
+  - `transform: scaleY(y)` 元素仅垂直方向缩放（Y 轴缩放）
+  - `transofmr: scale(x,y)` 使元素水平方向和垂直方向同时缩放（也就是 X 轴和 Y 轴同时缩放）
 - CSS3 skew()
-  - `transform: skewX(<angle>)` 按指定的角度沿X轴指定一个 skew transformation(斜切变换) 正值：逆时针
+  - `transform: skewX(<angle>)` 按指定的角度沿 X 轴指定一个 skew transformation(斜切变换) 正值：逆时针
   - `transform: skewY(<angle>)` 正值：顺时针，负值：逆时针
   - 轴心是中心点
   - `transform: skew(<anble>[, <anble>])`
 - CSS3 matrix()
-  - 以一个含六值的(a,b,c,d,e,f) 变换矩阵的形式指定一个2D变换
+  - 以一个含六值的(a,b,c,d,e,f) 变换矩阵的形式指定一个 2D 变换
   - 相当于直接应用一个[a,b,c,d,e,f] 变换矩阵
-  - transform: matrix(a,c,b,d,tx,ty) tx,ty就是基于X和Y坐标重新定位元素
+  - transform: matrix(a,c,b,d,tx,ty) tx,ty 就是基于 X 和 Y 坐标重新定位元素
 
-### CSS3 2D转换
+### CSS3 2D 转换
 
 - `translate(<translation-value>[, <translation-value>])`
-  - 通过矢量[tx,txy] 指定一个2D translation, tx是第一个过渡值参数，ty是第二个过渡值参数选项
+  - 通过矢量[tx,txy] 指定一个 2D translation, tx 是第一个过渡值参数，ty 是第二个过渡值参数选项
   - `transform: translate(<translate-value> [, <translation-value>])`
 
-### CSS3 3D转换
+### CSS3 3D 转换
 
 ![3D 转换](./images/3d.png)
 
@@ -680,14 +704,14 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
   - `transform: rotateX()`
   - `transform: rotateY()`
   - `transform: rotateZ()`
-  - `transform: rotate3d(x,y,z,angle)` 前3个参数分别表示旋转的方向x,y,z; 第四个参数表示旋转的角度，参数不允许省略
+  - `transform: rotate3d(x,y,z,angle)` 前 3 个参数分别表示旋转的方向 x,y,z; 第四个参数表示旋转的角度，参数不允许省略
 - `transform: translate3d(x,y,z)`
 - `transform: scale3d()`
 - `transofmr: matrix3d()`
   - `transform: matrix3d(sx,n,n,n,n,sy,n,n,n,n,sz,n,n,n,n,1)`
-  - 使用16个值的 4x4 矩阵 （旋转，移动，缩放）
+  - 使用 16 个值的 4x4 矩阵 （旋转，移动，缩放）
 
-### CSS3 Transform与坐标系统
+### CSS3 Transform 与坐标系统
 
 - `transform-origin` 属性允许您更改转换元素的位置
 - `transform-origin: x-axis y-axis z-axis`
@@ -700,24 +724,20 @@ filter: progid: DXImageTransform.Miscrosoft.gradient(startColorstr='#ff0000', en
 
 - `animation-name` 运动轨迹的名称
 - `animation-doration` 运动时长
-- `animation-timing-function` 运动的方式（默认ease）
+- `animation-timing-function` 运动的方式（默认 ease）
 - `animation-delay` 延迟时间
-- `animation-iteration-count` 运动次数（默认1 infinite 无线次运动）
+- `animation-iteration-count` 运动次数（默认 1 infinite 无线次运动）
 - `animation-fill-mode` 运动完成后的状态（帧动画完成后，元素会默认回到运动的起始位置，如果停留在最后一帧的位置，设置这个属性值为`forwards`;`backwards`是当前帧动画如果有延迟，在延迟等待时间内，元素处于帧动画的第一个帧位置; both=forwards+backwards）
 
 ```css
 @keysframes 运动轨迹名称 {
   from {
-
   }
   to {
-
   }
   0 {
-
   }
   10% {
-
   }
 }
 ```
